@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         scrollView.isPagingEnabled = true
         view.addSubview(scrollView)
         
+        scrollView.delegate = self
+        
         container = UIStackView()
         container.axis = .horizontal
         container.spacing = 0
@@ -104,3 +106,10 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
+        pageControl.currentPage = Int(pageNumber)
+        
+    }
+}
