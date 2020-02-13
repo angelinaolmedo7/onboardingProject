@@ -17,11 +17,14 @@ class ViewController: UIViewController {
     let firstView: UIView = UIView()
     let secondView: UIView = UIView()
     let thirdView: UIView = UIView()
+    
+    var nextButton: UIButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupScrollView()
+        
     }
     
     func setupScrollView() {
@@ -111,5 +114,23 @@ extension ViewController: UIScrollViewDelegate {
         let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
         pageControl.currentPage = Int(pageNumber)
         
+    }
+    
+}
+
+extension UINavigationController {
+    func initRootViewController(vc: UIViewController, transitionType type: String = "kCATransitionFade", duration: CFTimeInterval = 0.3) {
+        self.addTransition(transitionType: type, duration: duration)
+        self.viewControllers.removeAll()
+        self.pushViewController(vc, animated: false)
+        self.popToRootViewController(animated: false)
+    }
+    
+    private func addTransition(transitionType type: String = "kCATransitionFade", duration: CFTimeInterval = 0.3) {
+        let transition = CATransition()
+        transition.duration = duration
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType(rawValue: type)
+        self.view.layer.add(transition, forKey: nil)
     }
 }
