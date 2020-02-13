@@ -18,13 +18,25 @@ class ViewController: UIViewController {
     let secondView: UIView = UIView()
     let thirdView: UIView = UIView()
     
-    var nextButton: UIButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+    var nextButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupScrollView()
-        
+        setUpButton()
+    }
+    
+    func setUpButton() {
+        nextButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+        nextButton.backgroundColor = UIColor.blue
+        nextButton.setTitle("test", for: .normal)
+        nextButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        view.addSubview(nextButton)
+    }
+    
+    @objc func buttonAction(sender: UIButton!) {
+        print("tap")
     }
     
     func setupScrollView() {
