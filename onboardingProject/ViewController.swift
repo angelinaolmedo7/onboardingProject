@@ -23,8 +23,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setupScrollView()
         setUpButton()
+        setupScrollView()
     }
     
     func setUpButton() {
@@ -32,11 +32,10 @@ class ViewController: UIViewController {
         nextButton.backgroundColor = UIColor.blue
         nextButton.setTitle("test", for: .normal)
         nextButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        view.addSubview(nextButton)
     }
     
     @objc func buttonAction(sender: UIButton!) {
-        print("tap")
+        self.view.window!.rootViewController = LoginView()
     }
     
     func setupScrollView() {
@@ -84,7 +83,7 @@ class ViewController: UIViewController {
         
         createView(currentView: firstView, imageName: "witch", text: "hoo", isLastPage: false, color: UIColor.orange)
         createView(currentView: secondView, imageName: "witch", text: "hoo", isLastPage: false, color: UIColor.blue)
-        createView(currentView: thirdView, imageName: "witch", text: "hoo", isLastPage: false, color: UIColor.green)
+        createView(currentView: thirdView, imageName: "witch", text: "hoo", isLastPage: true, color: UIColor.green)
     }
     
     func createView(currentView: UIView, imageName: String, text: String, isLastPage: Bool, color: UIColor){
@@ -115,6 +114,10 @@ class ViewController: UIViewController {
         stackView.addArrangedSubview(message)
         
         currentView.backgroundColor = color
+        
+        if isLastPage {
+            stackView.addArrangedSubview(nextButton)
+        }
         
     }
 
