@@ -81,9 +81,9 @@ class ViewController: UIViewController {
         pageControl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
         pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-        createView(currentView: firstView, imageName: "witch", text: "hoo", isLastPage: false, color: UIColor.orange)
-        createView(currentView: secondView, imageName: "witch", text: "hoo", isLastPage: false, color: UIColor.blue)
-        createView(currentView: thirdView, imageName: "witch", text: "hoo", isLastPage: true, color: UIColor.green)
+        createView(currentView: firstView, imageName: "boxonastring1", text: "Monthly unique boxes", isLastPage: false, color: UIColor.orange)
+        createView(currentView: secondView, imageName: "boxonastring2", text: "Perfect for Worm on a String enthusiasts", isLastPage: false, color: UIColor.blue)
+        createView(currentView: thirdView, imageName: "boxonastring3", text: "Welcome to Box on a String!", isLastPage: true, color: UIColor.green)
     }
     
     func createView(currentView: UIView, imageName: String, text: String, isLastPage: Bool, color: UIColor){
