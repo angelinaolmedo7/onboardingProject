@@ -86,6 +86,7 @@ class ViewController: UIViewController {
         createView(currentView: thirdView, imageName: "boxonastring3", text: "Welcome to Box on a String!", isLastPage: true)
     }
     
+    func createView(currentView: UIView, imageName: String, text: String, isLastPage: Bool){
         let stackView = UIStackView()
         
         // Based on Techion gradient tutorial
