@@ -81,13 +81,20 @@ class ViewController: UIViewController {
         pageControl.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
         pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-        createView(currentView: firstView, imageName: "boxonastring1", text: "Monthly unique boxes", isLastPage: false, color: UIColor.orange)
-        createView(currentView: secondView, imageName: "boxonastring2", text: "Perfect for Worm on a String enthusiasts", isLastPage: false, color: UIColor.blue)
-        createView(currentView: thirdView, imageName: "boxonastring3", text: "Welcome to Box on a String!", isLastPage: true, color: UIColor.green)
+        createView(currentView: firstView, imageName: "boxonastring1", text: "Monthly unique boxes", isLastPage: false)
+        createView(currentView: secondView, imageName: "boxonastring2", text: "Perfect for Worm on a String enthusiasts", isLastPage: false)
+        createView(currentView: thirdView, imageName: "boxonastring3", text: "Welcome to Box on a String!", isLastPage: true)
     }
     
-    func createView(currentView: UIView, imageName: String, text: String, isLastPage: Bool, color: UIColor){
         let stackView = UIStackView()
+        
+        // Based on Techion gradient tutorial
+        let gradient = CAGradientLayer()
+        gradient.frame = view.bounds
+        gradient.colors = [UIColor(red: 51/255, green: 102/255, blue: 204/255, alpha: 1).cgColor, UIColor(red: 87/255, green: 135/255, blue: 230/255, alpha: 1).cgColor]
+        gradient.shouldRasterize = true
+        currentView.layer.addSublayer(gradient)
+        
         stackView.axis = .vertical
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -112,8 +119,6 @@ class ViewController: UIViewController {
         message.font = UIFont(name: "Helvetica", size: 20)
         message.textColor = UIColor(white: 1.0, alpha: 0.8)
         stackView.addArrangedSubview(message)
-        
-        currentView.backgroundColor = color
         
         if isLastPage {
             stackView.addArrangedSubview(nextButton)
