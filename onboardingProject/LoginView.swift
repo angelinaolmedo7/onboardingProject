@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class LoginView: UIViewController {
         
@@ -18,6 +19,8 @@ class LoginView: UIViewController {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
             setUpButton()
+            myView.addSubview(container)
+            myView.backgroundColor = .green
         }
         
         func setUpButton() {
@@ -26,7 +29,7 @@ class LoginView: UIViewController {
             nextButton.setTitle("test", for: .normal)
             nextButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
             
-            print("hoo")
+            print("hoot")
             
             container = UIStackView()
             container.addArrangedSubview(nextButton)

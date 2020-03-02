@@ -13,6 +13,10 @@
 		29888BA623EC877F00CCC99D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29888BA523EC877F00CCC99D /* Assets.xcassets */; };
 		29888BB323F3225B00CCC99D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888BB223F3225B00CCC99D /* LoginView.swift */; };
 		29888BB523F322C500CCC99D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888BB423F322C500CCC99D /* ContentView.swift */; };
+		29888BFE2408487600CCC99D /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888BFC2408487600CCC99D /* CircleImage.swift */; };
+		29888BFF2408487600CCC99D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888BFD2408487600CCC99D /* MapView.swift */; };
+		29888C3F240CE5B200CCC99D /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888C3D240CE5B200CCC99D /* SigninView.swift */; };
+		29888C40240CE5B200CCC99D /* SigninView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29888C3E240CE5B200CCC99D /* SigninView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		29888BAA23EC877F00CCC99D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29888BB223F3225B00CCC99D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		29888BB423F322C500CCC99D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		29888BFC2408487600CCC99D /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		29888BFD2408487600CCC99D /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		29888C3D240CE5B200CCC99D /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
+		29888C3E240CE5B200CCC99D /* SigninView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SigninView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,27 @@
 		29888B9B23EC877D00CCC99D /* onboardingProject */ = {
 			isa = PBXGroup;
 			children = (
+				29888C41240CE5BE00CCC99D /* Views */,
 				29888B9C23EC877D00CCC99D /* AppDelegate.swift */,
 				29888B9E23EC877D00CCC99D /* SceneDelegate.swift */,
 				29888BA023EC877D00CCC99D /* ViewController.swift */,
 				29888BA523EC877F00CCC99D /* Assets.xcassets */,
 				29888BAA23EC877F00CCC99D /* Info.plist */,
+				29888BFC2408487600CCC99D /* CircleImage.swift */,
+				29888BFD2408487600CCC99D /* MapView.swift */,
 				29888BB223F3225B00CCC99D /* LoginView.swift */,
 				29888BB423F322C500CCC99D /* ContentView.swift */,
 			);
 			path = onboardingProject;
+			sourceTree = "<group>";
+		};
+		29888C41240CE5BE00CCC99D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				29888C3D240CE5B200CCC99D /* SigninView.swift */,
+				29888C3E240CE5B200CCC99D /* SigninView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29888C40240CE5B200CCC99D /* SigninView.xib in Resources */,
 				29888BA623EC877F00CCC99D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,11 +157,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29888BFF2408487600CCC99D /* MapView.swift in Sources */,
 				29888BA123EC877D00CCC99D /* ViewController.swift in Sources */,
 				29888BB523F322C500CCC99D /* ContentView.swift in Sources */,
 				29888B9D23EC877D00CCC99D /* AppDelegate.swift in Sources */,
 				29888BB323F3225B00CCC99D /* LoginView.swift in Sources */,
 				29888B9F23EC877D00CCC99D /* SceneDelegate.swift in Sources */,
+				29888C3F240CE5B200CCC99D /* SigninView.swift in Sources */,
+				29888BFE2408487600CCC99D /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

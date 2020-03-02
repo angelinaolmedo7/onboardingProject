@@ -36,6 +36,9 @@ class ViewController: UIViewController {
     
     @objc func buttonAction(sender: UIButton!) {
         self.view.window!.rootViewController = LoginView()
+        //let profileView = ContentView()
+        //let viewController = UIHostingController(rootView: profileView)
+        
     }
     
     func setupScrollView() {
