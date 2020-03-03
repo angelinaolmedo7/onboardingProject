@@ -64,6 +64,8 @@
 		29888B9B23EC877D00CCC99D /* onboardingProject */ = {
 			isa = PBXGroup;
 			children = (
+				29888C3D240CE5B200CCC99D /* SigninView.swift */,
+				29888C3E240CE5B200CCC99D /* SigninView.xib */,
 				29888C41240CE5BE00CCC99D /* Views */,
 				29888B9C23EC877D00CCC99D /* AppDelegate.swift */,
 				29888B9E23EC877D00CCC99D /* SceneDelegate.swift */,
@@ -81,8 +83,6 @@
 		29888C41240CE5BE00CCC99D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				29888C3D240CE5B200CCC99D /* SigninView.swift */,
-				29888C3E240CE5B200CCC99D /* SigninView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";

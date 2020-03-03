@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SigninView: UIViewController {
 
+    @IBAction func goButton(_ sender: Any) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

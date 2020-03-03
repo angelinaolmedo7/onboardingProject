@@ -35,10 +35,10 @@ class ViewController: UIViewController {
     }
     
     @objc func buttonAction(sender: UIButton!) {
-        self.view.window!.rootViewController = LoginView()
-        //let profileView = ContentView()
-        //let viewController = UIHostingController(rootView: profileView)
-        
+        print("hee")
+        let vc: SigninView = SigninView()
+        let navigationController = UINavigationController(rootViewController: vc)
+        self.view.window!.rootViewController = navigationController //you can set it as root
     }
     
     func setupScrollView() {
@@ -95,7 +95,7 @@ class ViewController: UIViewController {
         // Based on Techion gradient tutorial
         let gradient = CAGradientLayer()
         gradient.frame = view.bounds
-        gradient.colors = [UIColor(red: 51/255, green: 102/255, blue: 204/255, alpha: 1).cgColor, UIColor(red: 87/255, green: 135/255, blue: 230/255, alpha: 1).cgColor]
+        gradient.colors = [UIColor(red: 16/255, green: 52/255, blue: 186/255, alpha: 1).cgColor, UIColor(red: 87/255, green: 135/255, blue: 230/255, alpha: 1).cgColor]
         gradient.shouldRasterize = true
         currentView.layer.addSublayer(gradient)
         
@@ -158,3 +158,4 @@ extension UINavigationController {
         self.view.layer.add(transition, forKey: nil)
     }
 }
+
