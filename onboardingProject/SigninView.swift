@@ -11,8 +11,8 @@ import SwiftUI
 
 class SigninView: UIViewController {
 
+    @IBOutlet weak var logoImage: UIImageView!
     @IBAction func goButton(_ sender: Any) {
-        print("haa")
         let vc: TabBarController = TabBarController()
         let navigationController = UINavigationController(rootViewController: vc)
         self.view.window!.rootViewController = navigationController
@@ -23,7 +23,15 @@ class SigninView: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 1.0, delay: 0.2,
+                       usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0, options: [], animations: {
+            self.logoImage.center.y += 50
+        }, completion: nil)
+    }
+    
+    
 
     /*
     // MARK: - Navigation
