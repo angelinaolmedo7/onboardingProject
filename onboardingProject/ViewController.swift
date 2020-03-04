@@ -35,10 +35,10 @@ class ViewController: UIViewController {
     }
     
     @objc func buttonAction(sender: UIButton!) {
-        print("hee")
+//        print("hee")
         let vc: SigninView = SigninView()
-        let navigationController = UINavigationController(rootViewController: vc)
-        self.view.window!.rootViewController = navigationController //you can set it as root
+//        let navigationController = UINavigationController(rootViewController: vc)
+        self.view.window!.rootViewController = vc //you can set it as root
     }
     
     func setupScrollView() {

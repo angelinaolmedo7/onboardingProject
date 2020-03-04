@@ -6,33 +6,39 @@
 //  Copyright © 2020 Angelina Olmedo. All rights reserved.
 //
 
-import UIKit
+import SwiftUI
 
-class ContentView: UIViewController {
-    
-    var container: UIStackView!
-    var nextButton: UIButton!
-    let myView: UIView = UIView()
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            MapView()
+                .edgesIgnoringSafeArea(.top)
+                .frame(height: 300)
+            
+            CircleImage()
+                .offset(y: -130)
+                .padding(.bottom, -130)
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        setUpButton()
+            VStack(alignment: .leading) {
+                Text("Angelina Olmedo")
+                    .font(.title)
+                HStack(alignment: .top) {
+                    Text("Software Developer")
+                        .font(.subheadline)
+                    Spacer()
+                    Text("San Francisco, California")
+                        .font(.subheadline)
+                }
+            }
+            .padding()
+            
+            Spacer()
+        }
     }
-    
-    func setUpButton() {
-        nextButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-        nextButton.backgroundColor = UIColor.blue
-        nextButton.setTitle("test", for: .normal)
-        nextButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        
-        print("hoo")
-        
-        container = UIStackView()
-        container.addArrangedSubview(nextButton)
-    }
-    
-    @objc func buttonAction(sender: UIButton!) {
-        self.view.window!.rootViewController = ContentView()
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
