@@ -1,22 +1,16 @@
 //
-//  SigninView.swift
+//  HomeView.swift
 //  onboardingProject
 //
-//  Created by Angelina Olmedo on 3/1/20.
+//  Created by Angelina Olmedo on 3/2/20.
 //  Copyright © 2020 Angelina Olmedo. All rights reserved.
 //
 
 import UIKit
-import SwiftUI
 
-class SigninView: UIViewController {
+class HomeView: UIViewController {
 
-    @IBAction func goButton(_ sender: Any) {
-        print("haa")
-        let vc: TabBarController = TabBarController()
-        let navigationController = UINavigationController(rootViewController: vc)
-        self.view.window!.rootViewController = navigationController
-    }
+    @IBOutlet weak var collView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

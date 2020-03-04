@@ -17,6 +17,11 @@
 		29888BFF2408487600CCC99D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888BFD2408487600CCC99D /* MapView.swift */; };
 		29888C3F240CE5B200CCC99D /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888C3D240CE5B200CCC99D /* SigninView.swift */; };
 		29888C40240CE5B200CCC99D /* SigninView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29888C3E240CE5B200CCC99D /* SigninView.xib */; };
+		29888C47240E1E7800CCC99D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888C46240E1E7800CCC99D /* TabBarController.swift */; };
+		29888C4A240E1F5700CCC99D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888C48240E1F5700CCC99D /* HomeView.swift */; };
+		29888C4B240E1F5700CCC99D /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29888C49240E1F5700CCC99D /* HomeView.xib */; };
+		29888C50240E208800CCC99D /* NewBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888C4E240E208800CCC99D /* NewBoxView.swift */; };
+		29888C51240E208800CCC99D /* NewBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29888C4F240E208800CCC99D /* NewBoxView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		29888BFD2408487600CCC99D /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		29888C3D240CE5B200CCC99D /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
 		29888C3E240CE5B200CCC99D /* SigninView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SigninView.xib; sourceTree = "<group>"; };
+		29888C46240E1E7800CCC99D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		29888C48240E1F5700CCC99D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		29888C49240E1F5700CCC99D /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		29888C4E240E208800CCC99D /* NewBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBoxView.swift; sourceTree = "<group>"; };
+		29888C4F240E208800CCC99D /* NewBoxView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewBoxView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +74,11 @@
 		29888B9B23EC877D00CCC99D /* onboardingProject */ = {
 			isa = PBXGroup;
 			children = (
+				29888C4E240E208800CCC99D /* NewBoxView.swift */,
+				29888C4F240E208800CCC99D /* NewBoxView.xib */,
+				29888C46240E1E7800CCC99D /* TabBarController.swift */,
+				29888C48240E1F5700CCC99D /* HomeView.swift */,
+				29888C49240E1F5700CCC99D /* HomeView.xib */,
 				29888C3D240CE5B200CCC99D /* SigninView.swift */,
 				29888C3E240CE5B200CCC99D /* SigninView.xib */,
 				29888C41240CE5BE00CCC99D /* Views */,
@@ -146,7 +161,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				29888C40240CE5B200CCC99D /* SigninView.xib in Resources */,
+				29888C51240E208800CCC99D /* NewBoxView.xib in Resources */,
 				29888BA623EC877F00CCC99D /* Assets.xcassets in Resources */,
+				29888C4B240E1F5700CCC99D /* HomeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,8 +177,11 @@
 				29888BFF2408487600CCC99D /* MapView.swift in Sources */,
 				29888BA123EC877D00CCC99D /* ViewController.swift in Sources */,
 				29888BB523F322C500CCC99D /* ContentView.swift in Sources */,
+				29888C4A240E1F5700CCC99D /* HomeView.swift in Sources */,
+				29888C47240E1E7800CCC99D /* TabBarController.swift in Sources */,
 				29888B9D23EC877D00CCC99D /* AppDelegate.swift in Sources */,
 				29888BB323F3225B00CCC99D /* LoginView.swift in Sources */,
+				29888C50240E208800CCC99D /* NewBoxView.swift in Sources */,
 				29888B9F23EC877D00CCC99D /* SceneDelegate.swift in Sources */,
 				29888C3F240CE5B200CCC99D /* SigninView.swift in Sources */,
 				29888BFE2408487600CCC99D /* CircleImage.swift in Sources */,
