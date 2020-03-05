@@ -20,7 +20,7 @@ class TabBarController: UITabBarController{
     func setupViewControllers(){
         let vc = HomeView()
         let vc1 = NewBoxView()
-        let pastBoxVC = PastBoxesView()
+        let pastBoxVC = PastBoxesTableViewController()
         let staffVC = UIHostingController(rootView: ContentView())
 
         vc.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), selectedImage: UIImage(named: "home"))

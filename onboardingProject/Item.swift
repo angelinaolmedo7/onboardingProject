@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Item {
+struct Item : Hashable {
     enum ItemType: Int, Codable, CaseIterable {
         case worm
         case tShirt

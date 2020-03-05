@@ -30,6 +30,15 @@
 		29888CE52411725300CCC99D /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29888CE32411725200CCC99D /* ItemCollectionViewCell.xib */; };
 		29888CE7241175C900CCC99D /* BoxContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888CE6241175C900CCC99D /* BoxContents.swift */; };
 		29888CE92411795E00CCC99D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888CE82411795E00CCC99D /* Item.swift */; };
+		29888CF024118DDD00CCC99D /* PastBoxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888CEE24118DDD00CCC99D /* PastBoxTableViewCell.swift */; };
+		29888CF124118DDD00CCC99D /* PastBoxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29888CEF24118DDD00CCC99D /* PastBoxTableViewCell.xib */; };
+		29888CF424118E6500CCC99D /* PastBoxesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888CF224118E6500CCC99D /* PastBoxesTableViewController.swift */; };
+		29888CF524118E6500CCC99D /* PastBoxesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29888CF324118E6500CCC99D /* PastBoxesTableViewController.xib */; };
+		29888CF72411917900CCC99D /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888CF62411917900CCC99D /* DateExtensions.swift */; };
+		29888CFA241195C400CCC99D /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888CF8241195C400CCC99D /* ItemTableViewCell.swift */; };
+		29888CFB241195C400CCC99D /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29888CF9241195C400CCC99D /* ItemTableViewCell.xib */; };
+		29888CFE2411A07C00CCC99D /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888CFC2411A07C00CCC99D /* ItemTableViewController.swift */; };
+		29888CFF2411A07C00CCC99D /* ItemTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29888CFD2411A07C00CCC99D /* ItemTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +67,15 @@
 		29888CE32411725200CCC99D /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		29888CE6241175C900CCC99D /* BoxContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxContents.swift; sourceTree = "<group>"; };
 		29888CE82411795E00CCC99D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		29888CEE24118DDD00CCC99D /* PastBoxTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastBoxTableViewCell.swift; sourceTree = "<group>"; };
+		29888CEF24118DDD00CCC99D /* PastBoxTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PastBoxTableViewCell.xib; sourceTree = "<group>"; };
+		29888CF224118E6500CCC99D /* PastBoxesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastBoxesTableViewController.swift; sourceTree = "<group>"; };
+		29888CF324118E6500CCC99D /* PastBoxesTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastBoxesTableViewController.xib; sourceTree = "<group>"; };
+		29888CF62411917900CCC99D /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		29888CF8241195C400CCC99D /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		29888CF9241195C400CCC99D /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
+		29888CFC2411A07C00CCC99D /* ItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
+		29888CFD2411A07C00CCC99D /* ItemTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +127,7 @@
 				29888BFD2408487600CCC99D /* MapView.swift */,
 				29888BB423F322C500CCC99D /* ContentView.swift */,
 				29888CE82411795E00CCC99D /* Item.swift */,
+				29888CF62411917900CCC99D /* DateExtensions.swift */,
 			);
 			path = onboardingProject;
 			sourceTree = "<group>";
@@ -117,11 +136,19 @@
 			isa = PBXGroup;
 			children = (
 				29888CD424102A2E00CCC99D /* PastBoxesView.swift */,
+				29888CF224118E6500CCC99D /* PastBoxesTableViewController.swift */,
+				29888CF324118E6500CCC99D /* PastBoxesTableViewController.xib */,
 				29888CD524102A2E00CCC99D /* PastBoxesView.xib */,
 				29888CD824103E4100CCC99D /* boxCollectionViewCell.swift */,
 				29888CD924103E4100CCC99D /* boxCollectionViewCell.xib */,
 				29888CE22411725200CCC99D /* ItemCollectionViewCell.swift */,
+				29888CFC2411A07C00CCC99D /* ItemTableViewController.swift */,
+				29888CFD2411A07C00CCC99D /* ItemTableViewController.xib */,
 				29888CE32411725200CCC99D /* ItemCollectionViewCell.xib */,
+				29888CEE24118DDD00CCC99D /* PastBoxTableViewCell.swift */,
+				29888CEF24118DDD00CCC99D /* PastBoxTableViewCell.xib */,
+				29888CF8241195C400CCC99D /* ItemTableViewCell.swift */,
+				29888CF9241195C400CCC99D /* ItemTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,10 +214,14 @@
 				29888CDB24103E4100CCC99D /* boxCollectionViewCell.xib in Resources */,
 				29888CD724102A2E00CCC99D /* PastBoxesView.xib in Resources */,
 				29888C40240CE5B200CCC99D /* SigninView.xib in Resources */,
+				29888CFF2411A07C00CCC99D /* ItemTableViewController.xib in Resources */,
 				29888CE52411725300CCC99D /* ItemCollectionViewCell.xib in Resources */,
 				29888C51240E208800CCC99D /* NewBoxView.xib in Resources */,
+				29888CF124118DDD00CCC99D /* PastBoxTableViewCell.xib in Resources */,
 				29888BA623EC877F00CCC99D /* Assets.xcassets in Resources */,
 				29888C4B240E1F5700CCC99D /* HomeView.xib in Resources */,
+				29888CFB241195C400CCC99D /* ItemTableViewCell.xib in Resources */,
+				29888CF524118E6500CCC99D /* PastBoxesTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,15 +235,20 @@
 				29888BFF2408487600CCC99D /* MapView.swift in Sources */,
 				29888BA123EC877D00CCC99D /* ViewController.swift in Sources */,
 				29888BB523F322C500CCC99D /* ContentView.swift in Sources */,
+				29888CF424118E6500CCC99D /* PastBoxesTableViewController.swift in Sources */,
 				29888C4A240E1F5700CCC99D /* HomeView.swift in Sources */,
 				29888CE92411795E00CCC99D /* Item.swift in Sources */,
+				29888CF72411917900CCC99D /* DateExtensions.swift in Sources */,
 				29888CDD24107F3000CCC99D /* boxLevels.swift in Sources */,
 				29888C47240E1E7800CCC99D /* TabBarController.swift in Sources */,
 				29888B9D23EC877D00CCC99D /* AppDelegate.swift in Sources */,
 				29888CDA24103E4100CCC99D /* boxCollectionViewCell.swift in Sources */,
 				29888C50240E208800CCC99D /* NewBoxView.swift in Sources */,
+				29888CFA241195C400CCC99D /* ItemTableViewCell.swift in Sources */,
+				29888CFE2411A07C00CCC99D /* ItemTableViewController.swift in Sources */,
 				29888B9F23EC877D00CCC99D /* SceneDelegate.swift in Sources */,
 				29888C3F240CE5B200CCC99D /* SigninView.swift in Sources */,
+				29888CF024118DDD00CCC99D /* PastBoxTableViewCell.swift in Sources */,
 				29888CD624102A2E00CCC99D /* PastBoxesView.swift in Sources */,
 				29888BFE2408487600CCC99D /* CircleImage.swift in Sources */,
 				29888CE42411725200CCC99D /* ItemCollectionViewCell.swift in Sources */,

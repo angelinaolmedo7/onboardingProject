@@ -77,7 +77,7 @@ class NewBoxView: UIViewController {
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ItemCollectionViewCell.identifier, for: indexPath) as! ItemCollectionViewCell
-            print(selectedPaths!.contains(indexPath))
+//            print(selectedPaths!.contains(indexPath))
             if selectedPaths!.contains(indexPath){
                 cell.setImage(image: availableItems[indexPath.row].image, withSelection: true)
                 
