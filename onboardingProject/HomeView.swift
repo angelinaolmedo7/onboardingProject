@@ -13,20 +13,59 @@ class HomeView: UIViewController {
     @IBOutlet weak var collView: UICollectionView!
     
     override func viewDidLoad() {
+
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        collView.register(boxCollectionViewCell.nib, forCellWithReuseIdentifier: boxCollectionViewCell.identifier)
+        setupNavBar()
+
+    }
+    
+    func setupNavBar() {
+        title = "Box on a String"
     }
 
+}
 
-    /*
-    // MARK: - Navigation
+extension HomeView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        return habitImages.count
+
     }
-    */
 
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HabitImageCollectionViewCell.identifier, for: indexPath) as! HabitImageCollectionViewCell
+        if indexPath == selectedIndexPath{
+            cell.setImage(image: habitImages[indexPath.row].0!, withSelection: true)
+            
+        }
+        else{
+            cell.setImage(image: habitImages[indexPath.row].0!, withSelection: false)
+            
+        }
+        return cell }
+    
+     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10.0
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let collectionViewWidth = collectionView.bounds.width
+        return CGSize(width: collectionViewWidth/4, height: collectionViewWidth/4)
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+    }
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        if selectedIndexPath == indexPath {
+          selectedIndexPath = nil
+        } else {
+          selectedIndexPath = indexPath
+        }
+          return false
+    }
 }
