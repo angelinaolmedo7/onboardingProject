@@ -9,22 +9,106 @@
 import UIKit
 
 class NewBoxView: UIViewController {
+    
+    var selectedPaths: [IndexPath?]? = [] {
+            didSet {
+                var indexPaths: [IndexPath] = []
+                for selectedIndexPath in selectedPaths! {
+                    if let selectedIndexPath = selectedIndexPath {
+                        indexPaths.append(selectedIndexPath)
+                    }
+                }
+                if let oldValue = oldValue {
+                    for deselectedPath in oldValue {
+                        if !indexPaths.contains(deselectedPath!){
+                            indexPaths.append(deselectedPath!)
+                        }
+                    }
+                }
+                collectionView.performBatchUpdates({
+                    self.collectionView.reloadItems(at: indexPaths)
+                })
+            }
+        }
+    
+//    var selectedIndexPath: IndexPath? {
+//        didSet {
+//            var indexPaths: [IndexPath] = []
+//            if let selectedIndexPath = selectedIndexPath {
+//                indexPaths.append(selectedIndexPath)
+//            }
+//            if let oldValue = oldValue {
+//                indexPaths.append(oldValue)
+//            }
+//            collectionView.performBatchUpdates({
+//                self.collectionView.reloadItems(at: indexPaths)
+//            })
+//        }
+//    }
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBAction func submitButtonPressed(_ sender: Any) {
+//        guard let selectedIndexPath = selectedIndexPath else {return}
+    }
+    
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+            super.viewDidLoad()
+            collectionView.register(ItemCollectionViewCell.nib, forCellWithReuseIdentifier: ItemCollectionViewCell.identifier)
+            setupNavBar()
+
+            collectionView.dataSource = self
+            collectionView.delegate = self
+
+        }
+        
+        func setupNavBar() {
+            title = "Select Items"
+        }
     }
 
+    extension NewBoxView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-    /*
-    // MARK: - Navigation
+            return availableItems.count
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        }
+
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ItemCollectionViewCell.identifier, for: indexPath) as! ItemCollectionViewCell
+            print(selectedPaths!.contains(indexPath))
+            if selectedPaths!.contains(indexPath){
+                cell.setImage(image: availableItems[indexPath.row].image, withSelection: true)
+                
+            }
+            else{
+                cell.setImage(image: availableItems[indexPath.row].image, withSelection: false)
+                
+            }
+            cell.itemLabel.text = availableItems[indexPath.row].title
+            return cell }
+        
+         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+            return 10.0
+        }
+
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let collectionViewWidth = collectionView.bounds.width
+            return CGSize(width: collectionViewWidth/4, height: collectionViewWidth/4)
+        }
+
+        func collectionView(_ collectionView: UICollectionView,
+                            layout collectionViewLayout: UICollectionViewLayout,
+                            insetForSectionAt section: Int) -> UIEdgeInsets {
+            return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        }
+        func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+            if selectedPaths!.contains(indexPath) {
+                selectedPaths!.remove(at: selectedPaths!.firstIndex(of: indexPath)!)
+            } else {
+                selectedPaths!.append(indexPath)
+            }
+              return false
+        }
     }
-    */
-
-}

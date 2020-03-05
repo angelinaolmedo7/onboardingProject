@@ -26,6 +26,10 @@
 		29888CDA24103E4100CCC99D /* boxCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888CD824103E4100CCC99D /* boxCollectionViewCell.swift */; };
 		29888CDB24103E4100CCC99D /* boxCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29888CD924103E4100CCC99D /* boxCollectionViewCell.xib */; };
 		29888CDD24107F3000CCC99D /* boxLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888CDC24107F3000CCC99D /* boxLevels.swift */; };
+		29888CE42411725200CCC99D /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888CE22411725200CCC99D /* ItemCollectionViewCell.swift */; };
+		29888CE52411725300CCC99D /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29888CE32411725200CCC99D /* ItemCollectionViewCell.xib */; };
+		29888CE7241175C900CCC99D /* BoxContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888CE6241175C900CCC99D /* BoxContents.swift */; };
+		29888CE92411795E00CCC99D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29888CE82411795E00CCC99D /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		29888CD824103E4100CCC99D /* boxCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boxCollectionViewCell.swift; sourceTree = "<group>"; };
 		29888CD924103E4100CCC99D /* boxCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = boxCollectionViewCell.xib; sourceTree = "<group>"; };
 		29888CDC24107F3000CCC99D /* boxLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boxLevels.swift; sourceTree = "<group>"; };
+		29888CE22411725200CCC99D /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		29888CE32411725200CCC99D /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		29888CE6241175C900CCC99D /* BoxContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxContents.swift; sourceTree = "<group>"; };
+		29888CE82411795E00CCC99D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,7 @@
 				29888C46240E1E7800CCC99D /* TabBarController.swift */,
 				29888C48240E1F5700CCC99D /* HomeView.swift */,
 				29888C49240E1F5700CCC99D /* HomeView.xib */,
+				29888CE6241175C900CCC99D /* BoxContents.swift */,
 				29888C3D240CE5B200CCC99D /* SigninView.swift */,
 				29888C3E240CE5B200CCC99D /* SigninView.xib */,
 				29888C41240CE5BE00CCC99D /* Views */,
@@ -99,6 +108,7 @@
 				29888BFC2408487600CCC99D /* CircleImage.swift */,
 				29888BFD2408487600CCC99D /* MapView.swift */,
 				29888BB423F322C500CCC99D /* ContentView.swift */,
+				29888CE82411795E00CCC99D /* Item.swift */,
 			);
 			path = onboardingProject;
 			sourceTree = "<group>";
@@ -110,6 +120,8 @@
 				29888CD524102A2E00CCC99D /* PastBoxesView.xib */,
 				29888CD824103E4100CCC99D /* boxCollectionViewCell.swift */,
 				29888CD924103E4100CCC99D /* boxCollectionViewCell.xib */,
+				29888CE22411725200CCC99D /* ItemCollectionViewCell.swift */,
+				29888CE32411725200CCC99D /* ItemCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +187,7 @@
 				29888CDB24103E4100CCC99D /* boxCollectionViewCell.xib in Resources */,
 				29888CD724102A2E00CCC99D /* PastBoxesView.xib in Resources */,
 				29888C40240CE5B200CCC99D /* SigninView.xib in Resources */,
+				29888CE52411725300CCC99D /* ItemCollectionViewCell.xib in Resources */,
 				29888C51240E208800CCC99D /* NewBoxView.xib in Resources */,
 				29888BA623EC877F00CCC99D /* Assets.xcassets in Resources */,
 				29888C4B240E1F5700CCC99D /* HomeView.xib in Resources */,
@@ -192,6 +205,7 @@
 				29888BA123EC877D00CCC99D /* ViewController.swift in Sources */,
 				29888BB523F322C500CCC99D /* ContentView.swift in Sources */,
 				29888C4A240E1F5700CCC99D /* HomeView.swift in Sources */,
+				29888CE92411795E00CCC99D /* Item.swift in Sources */,
 				29888CDD24107F3000CCC99D /* boxLevels.swift in Sources */,
 				29888C47240E1E7800CCC99D /* TabBarController.swift in Sources */,
 				29888B9D23EC877D00CCC99D /* AppDelegate.swift in Sources */,
@@ -201,6 +215,8 @@
 				29888C3F240CE5B200CCC99D /* SigninView.swift in Sources */,
 				29888CD624102A2E00CCC99D /* PastBoxesView.swift in Sources */,
 				29888BFE2408487600CCC99D /* CircleImage.swift in Sources */,
+				29888CE42411725200CCC99D /* ItemCollectionViewCell.swift in Sources */,
+				29888CE7241175C900CCC99D /* BoxContents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
