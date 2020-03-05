@@ -10,14 +10,17 @@ import UIKit
 
 class HomeView: UIViewController {
 
-    @IBOutlet weak var collView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
 
         super.viewDidLoad()
 
-        collView.register(boxCollectionViewCell.nib, forCellWithReuseIdentifier: boxCollectionViewCell.identifier)
+        collectionView.register(boxCollectionViewCell.nib, forCellWithReuseIdentifier: boxCollectionViewCell.identifier)
         setupNavBar()
+
+        collectionView.dataSource = self
+        collectionView.delegate = self
 
     }
     
@@ -29,22 +32,17 @@ class HomeView: UIViewController {
 
 extension HomeView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
-        return habitImages.count
+        
+        return levels.count
 
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HabitImageCollectionViewCell.identifier, for: indexPath) as! HabitImageCollectionViewCell
-        if indexPath == selectedIndexPath{
-            cell.setImage(image: habitImages[indexPath.row].0!, withSelection: true)
-            
-        }
-        else{
-            cell.setImage(image: habitImages[indexPath.row].0!, withSelection: false)
-            
-        }
-        return cell }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: boxCollectionViewCell.identifier, for: indexPath) as! boxCollectionViewCell
+        cell.titleLabel.text = levels[indexPath.row].title
+        cell.imageLabel.image = levels[indexPath.row].image
+        return cell
+    }
     
      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10.0
@@ -52,20 +50,12 @@ extension HomeView: UICollectionViewDataSource, UICollectionViewDelegate, UIColl
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionViewWidth = collectionView.bounds.width
-        return CGSize(width: collectionViewWidth/4, height: collectionViewWidth/4)
+        return CGSize(width: collectionViewWidth/2.2, height: collectionViewWidth/2.2)
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-    }
-    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        if selectedIndexPath == indexPath {
-          selectedIndexPath = nil
-        } else {
-          selectedIndexPath = indexPath
-        }
-          return false
     }
 }
