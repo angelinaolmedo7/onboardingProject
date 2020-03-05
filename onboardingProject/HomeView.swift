@@ -25,7 +25,6 @@ class HomeView: UIViewController {
     }
     
     func setupNavBar() {
-        title = "Box on a String"
     }
 
 }

@@ -29,8 +29,8 @@ class ViewController: UIViewController {
     
     func setUpButton() {
         nextButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-        nextButton.backgroundColor = UIColor.blue
-        nextButton.setTitle("test", for: .normal)
+        nextButton.backgroundColor = UIColor.black
+        nextButton.setTitle("I'm ready!", for: .normal)
         nextButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
     

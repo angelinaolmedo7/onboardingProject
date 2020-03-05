@@ -23,10 +23,10 @@ class TabBarController: UITabBarController{
         let pastBoxVC = PastBoxesView()
         let staffVC = UIHostingController(rootView: ContentView())
 
-        vc.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-        vc1.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
-        pastBoxVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 2)
-        staffVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 3)
+        vc.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), selectedImage: UIImage(named: "home"))
+        vc1.tabBarItem = UITabBarItem(title: "New Box", image: UIImage(named: "box"), selectedImage: UIImage(named: "box"))
+        pastBoxVC.tabBarItem = UITabBarItem(title: "Past Boxes", image: UIImage(named: "clock"), selectedImage: UIImage(named: "clock"))
+        staffVC.tabBarItem = UITabBarItem(title: "Staff", image: UIImage(named: "person"), selectedImage: UIImage(named: "person"))
 
         viewControllers = [vc, vc1, pastBoxVC, staffVC]
     }
