@@ -36,9 +36,15 @@ class ItemTableViewCell: UITableViewCell {
         self.imageIcon.image = contents.0.image
         self.titleLabel.text = contents.0.title
         self.quantityLabel.text = "\(contents.1)"
-        self.favIcon.image = UIImage(named: "star")!
-        self.favIcon.tintColor = UIColor.gray
     }
     
-    
+    func setImage(image: UIImage, withSelection: Bool) {
+        if withSelection {
+            self.favIcon.image = image.withRenderingMode(.alwaysOriginal)
+        }
+        else {
+            self.favIcon.image = image.withRenderingMode(.alwaysTemplate)
+            self.favIcon.tintColor = UIColor.gray
+        }
+    }
 }
