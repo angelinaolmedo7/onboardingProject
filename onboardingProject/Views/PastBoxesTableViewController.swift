@@ -16,7 +16,6 @@ class PastBoxesTableViewController: UITableViewController {
                         PastBoxTableViewCell.nib,
                         forCellReuseIdentifier: PastBoxTableViewCell.identifier
             )
-
             // Do any additional setup after loading the view.
         }
         
@@ -41,7 +40,16 @@ class PastBoxesTableViewController: UITableViewController {
         
         override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
-
             tableView.reloadData()
+        }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tabBarController!.navigationItem.title = "Past Boxes"
+    }
+        
+        override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+            self.tabBarController!.navigationItem.title = "Staff"
         }
     }

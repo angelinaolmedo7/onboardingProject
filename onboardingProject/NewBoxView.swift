@@ -56,17 +56,23 @@ class NewBoxView: UIViewController {
 
             super.viewDidLoad()
             collectionView.register(ItemCollectionViewCell.nib, forCellWithReuseIdentifier: ItemCollectionViewCell.identifier)
-            setupNavBar()
-
+            
             collectionView.dataSource = self
             collectionView.delegate = self
-
         }
-        
-        func setupNavBar() {
-            title = "Select Items"
-        }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController!.navigationItem.title = "Select Items"
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController!.navigationItem.title = "Staff"
+    }
+}
+
+
 
     extension NewBoxView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

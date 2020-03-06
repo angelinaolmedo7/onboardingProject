@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         VStack {
             MapView()
@@ -33,7 +34,8 @@ struct ContentView: View {
             .padding()
             
             Spacer()
-        }
+        }.onAppear(
+        )
     }
 }
 

@@ -17,14 +17,20 @@ class HomeView: UIViewController {
         super.viewDidLoad()
 
         collectionView.register(boxCollectionViewCell.nib, forCellWithReuseIdentifier: boxCollectionViewCell.identifier)
-        setupNavBar()
 
         collectionView.dataSource = self
         collectionView.delegate = self
 
     }
     
-    func setupNavBar() {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tabBarController!.navigationItem.title = "Home"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController!.navigationItem.title = "Staff"
     }
 
 }
